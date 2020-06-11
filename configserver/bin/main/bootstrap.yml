@@ -1,0 +1,15 @@
+# bootstrap.yml 공통 환경설정 파일. 기본 프로파일은 native,local로 지정
+server:
+  port: 9000
+spring:
+  profiles:
+    active: native,local
+  application:
+    name: config-service
+eureka:
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
