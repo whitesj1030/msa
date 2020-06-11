@@ -1,0 +1,23 @@
+spring:
+  profiles: alpha
+zuul:
+  routes:
+    member:
+      stripPrefix: false
+      path: /v1/member/**
+      url: member-service
+    pay:
+      stripPrefix: false
+      path: /v1/pay/**
+      url: contents-service
+    else:
+      stripPrefix: false
+      path: /v1/**
+      url: contents-service
+eureka:
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
