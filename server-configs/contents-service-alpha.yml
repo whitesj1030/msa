@@ -1,6 +1,6 @@
 spring:
   profiles: alpha
-  message: Hello Spring ContentsService Alpha Server!!!!!
+  message: Hello Spring ContentsService Alpha Server!!!
 spring:
   profiles: local
 eureka:
